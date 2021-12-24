@@ -8,10 +8,16 @@ namespace ExemploPOO
         static void Main(string[] args)
         {
 
-            Retangulo re = new Retangulo();
-            re.DefinirMedidas(30, 30);
+            Aluno p1 = new Aluno();
+            p1.Idade = 7;
+            p1.Nome = "Gabi";
+
+            p1.Apresentar();
+
+            // Retangulo re = new Retangulo();
+            // re.DefinirMedidas(30, 30);
             
-            System.Console.WriteLine($"Área: (re.ObterArea())");
+            // System.Console.WriteLine($"Área: (re.ObterArea())");
 
             // Pessoa p1 = new Pessoa();
             // p1.Nome = "Gabi";
