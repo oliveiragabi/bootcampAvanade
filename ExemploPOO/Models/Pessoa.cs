@@ -6,8 +6,9 @@ namespace ExemploPOO.Models
     {
         public string Nome { get; set; }
         public int Idade { get; set; }
+        public string Documento { get; set; }
 
-        public void Apresentar()
+        public virtual void Apresentar()
         {
             Console.WriteLine($"Meu nome é {Nome} e minha idade é {Idade} anos");
         }
