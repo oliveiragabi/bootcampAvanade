@@ -23,6 +23,13 @@ namespace ExemploPOO.Helper
                 System.Console.WriteLine(retorno);
             }
         }
+
+        public void CriarDiretorio(string caminho)
+        {
+            var retorno = Directory.CreateDirectory(caminho);
+            System.Console.WriteLine(retorno.FullName);
+        }
+
     }
 
 }
