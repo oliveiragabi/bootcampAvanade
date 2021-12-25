@@ -11,11 +11,15 @@ namespace ExemploPOO
         {
             var caminho = "C:\\TrabalhandoArquivos";
             var caminhoPathCombine = Path.Combine(caminho, "Pasta Teste 3", "Subspasta teste 3");
-            var caminhoArquivo = Path.Combine(caminho, "arquivo.teste.txt");
-            var listaString = new List<string> {"Linha 1", "Linha 2", "Linha 3"};
+            var caminhoArquivo = Path.Combine(caminho, "arquivo.teste-stream.txt");
             
+            var listaString = new List<string> {"Linha 1", "Linha 2", "Linha 3"};
+            var listaStringContinuacao = new List<string> {"Linha 4", "Linha 5"};
             FileHelper helper = new FileHelper();
-            helper.CriarArqTextoStream(caminhoArquivo, listaString);
+
+            helper.AdicionarArqTextoStream(caminhoArquivo, listaStringContinuacao);
+            
+            //helper.CriarArqTextoStream(caminhoArquivo, listaString);
 
            //helper.CriarArqTexto(caminhoArquivo, "Hello, World!");
 

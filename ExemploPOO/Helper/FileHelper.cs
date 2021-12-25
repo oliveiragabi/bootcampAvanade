@@ -54,6 +54,24 @@ namespace ExemploPOO.Helper
             }
         }
 
+        public void AdicionarTexto(string caminho, string conteudo)
+        {
+            File.AppendAllText(caminho, conteudo);
+
+        }
+
+        public void AdicionarArqTextoStream(string caminho, List<string> conteudo)
+        {
+            using (var stream = File.AppendText(caminho))
+            {
+                foreach (var linha in conteudo)
+                {
+                    stream.WriteLine(linha);
+                }
+            }
+        }
+
+
     }
 
 }
