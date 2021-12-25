@@ -1,5 +1,6 @@
 ﻿using System;
 using ExemploPOO.Models;
+using ExemploPOO.Interface;
 
 namespace ExemploPOO
 {
@@ -8,9 +9,11 @@ namespace ExemploPOO
         static void Main(string[] args)
         {
 
-            Corrente c = new Corrente();
-            c.Creditar(100);
-            c.ExibirSaldo();
+            ICalculadora calc = new Calculadora();
+            System.Console.WriteLine(calc.Dividir(21, 3));
+            // Corrente c = new Corrente();
+            // c.Creditar(100);
+            // c.ExibirSaldo();
 
             // Calculadora calc = new Calculadora();
             // System.Console.WriteLine("Result. da primeira soma: " + calc.Somar(10, 10));

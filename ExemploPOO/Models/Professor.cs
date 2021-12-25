@@ -1,5 +1,3 @@
-using System;
-
 namespace ExemploPOO.Models
 {
     public class Professor : Pessoa
@@ -8,7 +6,7 @@ namespace ExemploPOO.Models
 
         public override void Apresentar()
         {
-            Console.WriteLine($"Meu nome é {Nome}, minha idade é {Idade} anos. Sou professor, meu documento é: {Documento} e meu salário é: {Salario}");
+            Console.WriteLine($"Olá, meu nome é {Nome}, sou professor e ganho {Salario}");
         }
     }
 }
