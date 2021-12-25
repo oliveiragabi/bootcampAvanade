@@ -12,8 +12,12 @@ namespace ExemploPOO
             var caminho = "C:\\TrabalhandoArquivos";
             var caminhoPathCombine = Path.Combine(caminho, "Pasta Teste 3", "Subspasta teste 3");
             var caminhoArquivo = Path.Combine(caminho, "arquivo.teste.txt");
+            var listaString = new List<string> {"Linha 1", "Linha 2", "Linha 3"};
+            
             FileHelper helper = new FileHelper();
-            helper.CriarArqTexto(caminhoArquivo, "Hello, World!");
+            helper.CriarArqTextoStream(caminhoArquivo, listaString);
+
+           //helper.CriarArqTexto(caminhoArquivo, "Hello, World!");
 
             //helper.ApagarDiretorio(caminhoPathCombine, true);
             // helper.CriarDiretorio(caminhoPathCombine);

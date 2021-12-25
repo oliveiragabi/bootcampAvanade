@@ -43,6 +43,16 @@ namespace ExemploPOO.Helper
 
             }
         }
+        public void CriarArqTextoStream(string caminho, List<string> conteudo)
+        {
+            using (var stream = File.CreateText(caminho))
+            {
+                foreach (var linha in conteudo)
+                {
+                    stream.WriteLine(linha);
+                }
+            }
+        }
 
     }
 
