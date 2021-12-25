@@ -35,6 +35,15 @@ namespace ExemploPOO.Helper
             Directory.Delete(caminho, apagarArquivo);
         }
 
+        public void CriarArqTexto(string caminho, string conteudo)
+        {
+            if(!File.Exists(caminho))
+            {
+                File.WriteAllText(caminho, conteudo);
+
+            }
+        }
+
     }
 
 }

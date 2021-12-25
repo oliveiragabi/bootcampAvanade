@@ -11,9 +11,11 @@ namespace ExemploPOO
         {
             var caminho = "C:\\TrabalhandoArquivos";
             var caminhoPathCombine = Path.Combine(caminho, "Pasta Teste 3", "Subspasta teste 3");
+            var caminhoArquivo = Path.Combine(caminho, "arquivo.teste.txt");
             FileHelper helper = new FileHelper();
+            helper.CriarArqTexto(caminhoArquivo, "Hello, World!");
 
-            helper.ApagarDiretorio(caminhoPathCombine, true);
+            //helper.ApagarDiretorio(caminhoPathCombine, true);
             // helper.CriarDiretorio(caminhoPathCombine);
 
             // helper.ListarArquivosDiretorios(caminho);
