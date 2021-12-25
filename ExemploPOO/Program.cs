@@ -9,11 +9,13 @@ namespace ExemploPOO
     {
         static void Main(string[] args)
         {
-
             var caminho = "C:\\TrabalhandoArquivos";
 
             FileHelper helper = new FileHelper();
-            helper.ListarDiretorios(caminho);
+            helper.ListarArquivosDiretorios(caminho);
+
+            // FileHelper helper = new FileHelper();
+            // helper.ListarDiretorios(caminho);
 
 
 

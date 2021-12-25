@@ -13,6 +13,16 @@ namespace ExemploPOO.Helper
                 System.Console.WriteLine(retorno);
             }
         }
+
+        public void ListarArquivosDiretorios (string caminho)
+        {
+            var retornoArquivo = Directory.GetFiles(caminho, "*", SearchOption.AllDirectories);
+
+            foreach (var retorno in retornoArquivo)
+            {
+                System.Console.WriteLine(retorno);
+            }
+        }
     }
 
 }
