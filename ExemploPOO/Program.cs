@@ -1,6 +1,7 @@
 ﻿using System;
 using ExemploPOO.Models;
 using ExemploPOO.Interface;
+using ExemploPOO.Helper;
 
 namespace ExemploPOO
 {
@@ -9,8 +10,16 @@ namespace ExemploPOO
         static void Main(string[] args)
         {
 
-            ICalculadora calc = new Calculadora();
-            System.Console.WriteLine(calc.Dividir(21, 3));
+            var caminho = "C:\\TrabalhandoArquivos";
+
+            FileHelper helper = new FileHelper();
+            helper.ListarDiretorios(caminho);
+
+
+
+            // ICalculadora calc = new Calculadora();
+            // System.Console.WriteLine(calc.Dividir(21, 3));
+
             // Corrente c = new Corrente();
             // c.Creditar(100);
             // c.ExibirSaldo();
