@@ -30,6 +30,11 @@ namespace ExemploPOO.Helper
             System.Console.WriteLine(retorno.FullName);
         }
 
+        public void ApagarDiretorio(string caminho, bool apagarArquivo)
+        {
+            Directory.Delete(caminho, apagarArquivo);
+        }
+
     }
 
 }
