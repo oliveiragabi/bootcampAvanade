@@ -7,8 +7,13 @@ namespace ExemploConstrutores
     {
         static void Main(string[] args)
         {
-            Pessoa p1 = new Pessoa("Gabi", "Souza");
-            p1.Apresentar();
+            Log log = log.GetInstance();
+            log.PropriedadeLog = "Teste instancia";
+
+            Log log2 = log.GetInstance();
+            System.Console.WriteLine(log2.PropriedadeLog);
+            // Pessoa p1 = new Pessoa("Gabi", "Souza");
+            // p1.Apresentar();
         }
     }
 }
