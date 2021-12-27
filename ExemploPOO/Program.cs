@@ -17,7 +17,9 @@ namespace ExemploPOO
             var listaStringContinuacao = new List<string> {"Linha 4", "Linha 5"};
             FileHelper helper = new FileHelper();
 
-            helper.AdicionarArqTextoStream(caminhoArquivo, listaStringContinuacao);
+            helper.LerArquivoStream(caminhoArquivo);
+
+            //helper.AdicionarArqTextoStream(caminhoArquivo, listaStringContinuacao);
             
             //helper.CriarArqTextoStream(caminhoArquivo, listaString);
 
