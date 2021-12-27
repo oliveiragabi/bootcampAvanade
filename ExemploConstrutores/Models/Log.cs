@@ -1,8 +1,9 @@
 namespace ExemploConstrutores.Models
+
 {
     public class Log
     {
-        private log _log;
+        private static Log _log;
 
         public string PropriedadeLog { get; set; }
 
@@ -15,7 +16,7 @@ namespace ExemploConstrutores.Models
         {
             if(_log == null)
             {
-                _log = new log();
+                _log = new Log();
             }
             return _log;
         }
