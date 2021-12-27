@@ -21,7 +21,9 @@ namespace ExemploPOO
             var listaStringContinuacao = new List<string> {"Linha 4", "Linha 5"};
             FileHelper helper = new FileHelper();
 
-            helper.CopiarArquivo(caminhoArquivoTeste, caminhoArquivoTesteCopia, false);
+            helper.DeletarArquivo(caminhoArquivoTesteCopia);
+
+            //helper.CopiarArquivo(caminhoArquivoTeste, caminhoArquivoTesteCopia, false);
 
             //helper.MoverArquivo(caminhoArquivo, novoCaminhoArquivo,false);
 
