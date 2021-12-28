@@ -11,8 +11,9 @@ namespace ExemploConstrutores
         static void Main(string[] args)
         {
             Operacao op = new Operacao(Calculadora.Somar);
+            op += Calculadora.Subtrair;
             op.Invoke(10,25);
-            
+
             // Data data = new Data();
             // //data.SetMes(2);
 
