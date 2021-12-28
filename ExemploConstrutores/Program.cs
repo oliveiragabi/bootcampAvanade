@@ -9,7 +9,10 @@ namespace ExemploConstrutores
         static void Main(string[] args)
         {
             Data data = new Data();
-            data.SetMes(2);
+            //data.SetMes(2);
+
+            data.Mes = 12;
+            System.Console.WriteLine(data.Mes);
 
             data.ApresentarMes();
 

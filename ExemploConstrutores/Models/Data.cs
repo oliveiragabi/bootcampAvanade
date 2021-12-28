@@ -19,6 +19,26 @@ namespace ExemploConstrutores
             }
         }
 
+        public int Mes
+        { 
+            get
+            {
+
+                return this.mes;
+
+            } 
+            set 
+            {
+
+                if (mes > 0 && mes <= 12)
+                {
+                    this.mes = mes;
+                    this.mesValido = true;
+                }
+
+            }
+        }
+
         public void ApresentarMes()
         {
             if(this.mesValido)
