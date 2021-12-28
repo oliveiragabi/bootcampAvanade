@@ -6,15 +6,20 @@ namespace ExemploConstrutores
 {
     class Program
     {
+        public delegate void Operacao(int x, int y);
+
         static void Main(string[] args)
         {
-            Data data = new Data();
-            //data.SetMes(2);
+            Operacao op = new Operacao(Calculadora.Somar);
+            op.Invoke(10,25);
+            
+            // Data data = new Data();
+            // //data.SetMes(2);
 
-            data.Mes = 12;
-            System.Console.WriteLine(data.Mes);
+            // data.Mes = 12;
+            // System.Console.WriteLine(data.Mes);
 
-            data.ApresentarMes();
+            // data.ApresentarMes();
 
             // Log log = Log.GetInstance();
             // log.PropriedadeLog = "Teste instancia";
