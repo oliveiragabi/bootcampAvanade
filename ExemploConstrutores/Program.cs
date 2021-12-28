@@ -8,6 +8,11 @@ namespace ExemploConstrutores
     {
         static void Main(string[] args)
         {
+            Data data = new Data();
+            data.SetMes(2);
+
+            data.ApresentarMes();
+
             // Log log = Log.GetInstance();
             // log.PropriedadeLog = "Teste instancia";
 
@@ -17,8 +22,8 @@ namespace ExemploConstrutores
             // Pessoa p1 = new Pessoa("Gabi", "Souza");
             // p1.Apresentar();
 
-            Aluno a1 = new Aluno("Gabi", "Souza", "Matematica");
-            a1.Apresentar();
+            // Aluno a1 = new Aluno("Gabi", "Souza", "Matematica");
+            // a1.Apresentar();
         }
     }
 }
