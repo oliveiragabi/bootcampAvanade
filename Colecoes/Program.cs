@@ -1,5 +1,5 @@
 ﻿using System;
-
+using Colecoes.Helper;
 
 namespace Colecoes
 {
@@ -7,21 +7,32 @@ namespace Colecoes
     {
         static void Main(string[] args)
         {   
-            int[,] matriz = new int [4, 2]
-            {
-                { 8 , 8 },
-                { 10, 20 },
-                { 50, 100 },
-                { 90, 200 }
-            };
+            OperacoesArrays op = new OperacoesArrays();
+            int[] array = new int[5] { 6, 3, 8, 1, 9 };
 
-            for (int i = 0; i < matriz.GetLength(0); i++)
-            {
-                for (int j = 0; j < matriz.GetLength(1); j++)
-                {
-                    System.Console.WriteLine(matriz[i, j]);
-                }
-            }     
+            System.Console.WriteLine("Array original: ");
+            op.ImprimirArray(array);
+
+            op.OrdenarBubbleSort(ref array);
+            
+            System.Console.WriteLine("Array ordenado: ");
+            op.ImprimirArray(array);
+
+            // int[,] matriz = new int [4, 2]
+            // {
+            //     { 8 , 8 },
+            //     { 10, 20 },
+            //     { 50, 100 },
+            //     { 90, 200 }
+            // };
+
+            // for (int i = 0; i < matriz.GetLength(0); i++)
+            // {
+            //     for (int j = 0; j < matriz.GetLength(1); j++)
+            //     {
+            //         System.Console.WriteLine(matriz[i, j]);
+            //     }
+            // }     
             // int[] arrayInt = new int[3];
             // arrayInt[0] = 10;
             // arrayInt[1] = 5;
