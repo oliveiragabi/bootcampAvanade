@@ -11,6 +11,18 @@ namespace Colecoes
             int[] array = new int[5] { 6, 3, 8, 1, 9 };
             int[] arrayCopia = new int[10];
 
+            int valorProcurado = 1;
+            bool existe = op.Existe(array, 1);
+
+            if(existe)
+            {
+                System.Console.WriteLine("Encontrei o valor: {0}", valorProcurado);
+            }
+            else
+            {
+                System.Console.WriteLine("Não encontrei o valor: {0}", valorProcurado);
+            }
+
             // System.Console.WriteLine("Array original: ");
             // op.ImprimirArray(array);
 
@@ -20,12 +32,13 @@ namespace Colecoes
             // System.Console.WriteLine("Array ordenado: ");
             // op.ImprimirArray(array);
 
-            System.Console.WriteLine("Array antes da copia: ");
-            op.ImprimirArray(arrayCopia);
+            // System.Console.WriteLine("Array antes da copia: ");
+            // op.ImprimirArray(arrayCopia);
 
-            op.Copiar(ref array, ref arrayCopia);
-            System.Console.WriteLine("Array após a copia: ");
-            op.ImprimirArray(arrayCopia);
+            // op.Copiar(ref array, ref arrayCopia);
+            // System.Console.WriteLine("Array após a copia: ");
+            // op.ImprimirArray(arrayCopia);
+
             // int[,] matriz = new int [4, 2]
             // {
             //     { 8 , 8 },
