@@ -10,18 +10,23 @@ namespace Colecoes
             OperacoesArrays op = new OperacoesArrays();
             int[] array = new int[5] { 6, 3, 8, 1, 9 };
             int[] arrayCopia = new int[10];
+            string[] arrayString = op.ConverterParaArrayString(array);
 
-            int valorProcurado = 8;
-            int indice = op.ObterIndice(array, valorProcurado);
+          // int valorProcurado = 8;
+            System.Console.WriteLine($"Capacidade atual do array: {array.Length}");
 
-            if(indice >-1 )
-            {
-                System.Console.WriteLine("O indice do elemento {0} é: {1}", valorProcurado, indice);
-            }
-            else
-            {
-                System.Console.WriteLine("Valor não existente no array.");
-            }
+            op.RedimensionarArray(ref array, array.Length * 2);
+            System.Console.WriteLine($"Capacidade atual do array após red: {array.Length}");
+            // int indice = op.ObterIndice(array, valorProcurado);
+
+            // if(indice >-1 )
+            // {
+            //     System.Console.WriteLine("O indice do elemento {0} é: {1}", valorProcurado, indice);
+            // }
+            // else
+            // {
+            //     System.Console.WriteLine("Valor não existente no array.");
+            // }
             // int valorAchado = op.ObterValor(array, valorProcurado);
             
             // if(valorAchado > 0)
