@@ -7,17 +7,33 @@ namespace Colecoes
     {
         static void Main(string[] args)
         {   
-            OperacoesArrays op = new OperacoesArrays();
-            int[] array = new int[5] { 6, 3, 8, 1, 9 };
-            int[] arrayCopia = new int[10];
-            string[] arrayString = op.ConverterParaArrayString(array);
 
-          // int valorProcurado = 8;
-            System.Console.WriteLine($"Capacidade atual do array: {array.Length}");
+            List<string> estados = new List<string>();
+            estados.Add("AM");
+            estados.Add("PE");
+            estados.Add("MA");
 
-            op.RedimensionarArray(ref array, array.Length * 2);
-            System.Console.WriteLine($"Capacidade atual do array após red: {array.Length}");
-            // int indice = op.ObterIndice(array, valorProcurado);
+            System.Console.WriteLine($"Qtd de elementos na lista: {estados.Count}");
+            foreach (var e in estados)
+            {
+                System.Console.WriteLine(e);
+            }
+
+            for (int i = 0; i < estados.Count; i++)
+            {
+                System.Console.WriteLine($"Indice {i}, Valor: {estados[i]}");
+            }
+        //     OperacoesArrays op = new OperacoesArrays();
+        //     int[] array = new int[5] { 6, 3, 8, 1, 9 };
+        //     int[] arrayCopia = new int[10];
+        //     string[] arrayString = op.ConverterParaArrayString(array);
+
+        //   // int valorProcurado = 8;
+        //     System.Console.WriteLine($"Capacidade atual do array: {array.Length}");
+
+        //     op.RedimensionarArray(ref array, array.Length * 2);
+        //     System.Console.WriteLine($"Capacidade atual do array após red: {array.Length}");
+        //     // int indice = op.ObterIndice(array, valorProcurado);
 
             // if(indice >-1 )
             // {
