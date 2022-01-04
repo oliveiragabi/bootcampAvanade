@@ -18,7 +18,9 @@ namespace Colecoes
             // System.Console.WriteLine("Removendo o elemento");
             // estados.Remove("AM");
 
-            estados.AddRange(estadosArray);
+            // estados.AddRange(estadosArray);
+
+            estados.Insert(1, "AC");
 
             opLista.ImprimirListaString(estados);
             
