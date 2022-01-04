@@ -1,5 +1,6 @@
 ﻿using System;
 using Colecoes.Helper;
+using System.Collections.Generic;
 
 namespace Colecoes
 {
@@ -7,22 +8,52 @@ namespace Colecoes
     {
         static void Main(string[] args)
         {   
-            OperacoesLista opLista = new OperacoesLista();
-            List<string> estados = new List<string>() { "AM", "PE", "MA" };
-            string[] estadosArray = new string[2] { "SP", "RJ" };
+            Stack<string> pilhaLivros = new Stack<string>();
 
-            System.Console.WriteLine($"A qtd de elementos na lista: {estados.Count}");
+            pilhaLivros.Push(".net");
+            pilhaLivros.Push("clear code");
+            pilhaLivros.Push("BDD");
 
-            opLista.ImprimirListaString(estados);
+            System.Console.WriteLine($"Livros para leitura: {pilhaLivros.Count}");
 
-            // System.Console.WriteLine("Removendo o elemento");
-            // estados.Remove("AM");
+            while (pilhaLivros.Count > 0)
+            {
+                 System.Console.WriteLine($"Proximo livro p/ leitura: {pilhaLivros.Peek()}");
+                 System.Console.WriteLine($"{pilhaLivros.Pop()} lido com sucesso");
+            }
 
-            // estados.AddRange(estadosArray);
+            // Queue<string> fila = new Queue<string>();
+            // fila.Enqueue("Gabi");
+            // fila.Enqueue("Ruan");
+            // fila.Enqueue("Lara");
+            // fila.Enqueue("Luana");
+            // fila.Enqueue("Mary");
 
-            estados.Insert(1, "AC");
+            // System.Console.WriteLine($"Pessoas na fila: {fila.Count}");
 
-            opLista.ImprimirListaString(estados);
+            // while (fila.Count > 0)
+            // {
+            //     System.Console.WriteLine($"Vez de {fila.Peek()}");
+            //     System.Console.WriteLine($"Vez de {fila.Dequeue()} atendido");
+            // }
+
+
+            // OperacoesLista opLista = new OperacoesLista();
+            // List<string> estados = new List<string>() { "AM", "PE", "MA" };
+            // string[] estadosArray = new string[2] { "SP", "RJ" };
+
+            // System.Console.WriteLine($"A qtd de elementos na lista: {estados.Count}");
+
+            // opLista.ImprimirListaString(estados);
+
+            // // System.Console.WriteLine("Removendo o elemento");
+            // // estados.Remove("AM");
+
+            // // estados.AddRange(estadosArray);
+
+            // estados.Insert(1, "AC");
+
+            // opLista.ImprimirListaString(estados);
             
         //     OperacoesArrays op = new OperacoesArrays();
         //     int[] array = new int[5] { 6, 3, 8, 1, 9 };
