@@ -7,22 +7,21 @@ namespace Colecoes
     {
         static void Main(string[] args)
         {   
+            OperacoesLista opLista = new OperacoesLista();
+            List<string> estados = new List<string>() { "AM", "PE", "MA" };
+            string[] estadosArray = new string[2] { "SP", "RJ" };
 
-            List<string> estados = new List<string>();
-            estados.Add("AM");
-            estados.Add("PE");
-            estados.Add("MA");
+            System.Console.WriteLine($"A qtd de elementos na lista: {estados.Count}");
 
-            System.Console.WriteLine($"Qtd de elementos na lista: {estados.Count}");
-            foreach (var e in estados)
-            {
-                System.Console.WriteLine(e);
-            }
+            opLista.ImprimirListaString(estados);
 
-            for (int i = 0; i < estados.Count; i++)
-            {
-                System.Console.WriteLine($"Indice {i}, Valor: {estados[i]}");
-            }
+            // System.Console.WriteLine("Removendo o elemento");
+            // estados.Remove("AM");
+
+            estados.AddRange(estadosArray);
+
+            opLista.ImprimirListaString(estados);
+            
         //     OperacoesArrays op = new OperacoesArrays();
         //     int[] array = new int[5] { 6, 3, 8, 1, 9 };
         //     int[] arrayCopia = new int[10];
