@@ -19,6 +19,12 @@ namespace Colecoes
             // }
 
             string valorProcurado = "BA";
+            System.Console.WriteLine("Valor original: ");
+            System.Console.WriteLine(estados[valorProcurado]);
+
+            estados[valorProcurado] = "BA - teste atualização";
+
+            System.Console.WriteLine("Valor atualizado: ");
             System.Console.WriteLine(estados[valorProcurado]);
 
             // Stack<string> pilhaLivros = new Stack<string>();
