@@ -13,19 +13,28 @@ namespace Colecoes
             estados.Add("MG", "Minas Gerais");
             estados.Add("BA", "Bahia");
 
-            // foreach (KeyValuePair<string, string> item in estados)
-            // {
-            //     System.Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
-            // }
+            foreach (KeyValuePair<string, string> item in estados)
+            {
+                System.Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+            }
 
             string valorProcurado = "BA";
-            System.Console.WriteLine("Valor original: ");
-            System.Console.WriteLine(estados[valorProcurado]);
 
-            estados[valorProcurado] = "BA - teste atualização";
+            System.Console.WriteLine($"Removendo valor: {valorProcurado}");
+            estados.Remove(valorProcurado);
+            
+            foreach (KeyValuePair<string, string> item in estados)
+            {
+                System.Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+            }
 
-            System.Console.WriteLine("Valor atualizado: ");
-            System.Console.WriteLine(estados[valorProcurado]);
+            // System.Console.WriteLine("Valor original: ");
+            // System.Console.WriteLine(estados[valorProcurado]);
+
+            // estados[valorProcurado] = "BA - teste atualização";
+
+            // System.Console.WriteLine("Valor atualizado: ");
+            // System.Console.WriteLine(estados[valorProcurado]);
 
             // Stack<string> pilhaLivros = new Stack<string>();
 
