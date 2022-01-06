@@ -8,19 +8,29 @@ namespace Colecoes
     {
         static void Main(string[] args)
         {   
-            Stack<string> pilhaLivros = new Stack<string>();
+            Dictionary<string, string> estados = new Dictionary<string, string>();
+            estados.Add("SP", "São Paulo");
+            estados.Add("MG", "Minas Gerais");
+            estados.Add("BA", "Bahia");
 
-            pilhaLivros.Push(".net");
-            pilhaLivros.Push("clear code");
-            pilhaLivros.Push("BDD");
-
-            System.Console.WriteLine($"Livros para leitura: {pilhaLivros.Count}");
-
-            while (pilhaLivros.Count > 0)
+            foreach (KeyValuePair<string, string> item in estados)
             {
-                 System.Console.WriteLine($"Proximo livro p/ leitura: {pilhaLivros.Peek()}");
-                 System.Console.WriteLine($"{pilhaLivros.Pop()} lido com sucesso");
+                System.Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
             }
+
+            // Stack<string> pilhaLivros = new Stack<string>();
+
+            // pilhaLivros.Push(".net");
+            // pilhaLivros.Push("clear code");
+            // pilhaLivros.Push("BDD");
+
+            // System.Console.WriteLine($"Livros para leitura: {pilhaLivros.Count}");
+
+            // while (pilhaLivros.Count > 0)
+            // {
+            //      System.Console.WriteLine($"Proximo livro p/ leitura: {pilhaLivros.Peek()}");
+            //      System.Console.WriteLine($"{pilhaLivros.Pop()} lido com sucesso");
+            // }
 
             // Queue<string> fila = new Queue<string>();
             // fila.Enqueue("Gabi");
