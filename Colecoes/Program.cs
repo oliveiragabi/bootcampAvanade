@@ -9,18 +9,26 @@ namespace Colecoes
     {
         static void Main(string[] args)
         {   
-            int[] arrayNumeros = new int[] { 1, 4, 8, 15, 19 };
+            int[] arrayNumeros = new int[7] { 100, 1, 4, 8, 15, 19, 25 };
 
-            var numerosParesQuery = 
-                    from num in arrayNumeros
-                    where num % 2 == 0
-                    orderby num
-                    select num;
+            var min = arrayNumeros.Min();
+            var max = arrayNumeros.Max();
+            var medio = arrayNumeros.Average();
+
+            System.Console.WriteLine($"Mínimo: {min}");
+            System.Console.WriteLine($"Mínimo: {max}");
+            System.Console.WriteLine($"Médio: {medio}");
+
+            // var numerosParesQuery = 
+            //         from num in arrayNumeros
+            //         where num % 2 == 0
+            //         orderby num
+            //         select num;
             
-            var numerosParesMetodo = arrayNumeros.Where(x => x % 2 == 0).OrderBy(x => x).ToList();
+            // var numerosParesMetodo = arrayNumeros.Where(x => x % 2 == 0).OrderBy(x => x).ToList();
 
-            System.Console.WriteLine("Numeros pares query: " + string.Join(", ", numerosParesQuery));
-            System.Console.WriteLine("Numeros pares método: " + string.Join(", ", numerosParesMetodo));
+            // System.Console.WriteLine("Numeros pares query: " + string.Join(", ", numerosParesQuery));
+            // System.Console.WriteLine("Numeros pares método: " + string.Join(", ", numerosParesMetodo));
 
             // Dictionary<string, string> estados = new Dictionary<string, string>();
             // estados.Add("SP", "São Paulo");
