@@ -9,15 +9,22 @@ namespace Colecoes
     {
         static void Main(string[] args)
         {   
-            int[] arrayNumeros = new int[7] { 100, 1, 4, 8, 15, 19, 25 };
+            int[] arrayNumeros = new int[10] { 100, 1, 4, 0, 8, 15, 19, 19, 4, 100 };
 
             var min = arrayNumeros.Min();
             var max = arrayNumeros.Max();
             var medio = arrayNumeros.Average();
+            var soma = arrayNumeros.Sum();
+            var arrayUnico = arrayNumeros.Distinct().ToArray();
+
 
             System.Console.WriteLine($"Mínimo: {min}");
             System.Console.WriteLine($"Mínimo: {max}");
             System.Console.WriteLine($"Médio: {medio}");
+            System.Console.WriteLine($"Soma: {soma}");
+            System.Console.WriteLine($"Array original: {string.Join(",", arrayNumeros)}");
+            System.Console.WriteLine($"Array original: {string.Join(",", arrayUnico)}");    
+    
 
             // var numerosParesQuery = 
             //         from num in arrayNumeros
